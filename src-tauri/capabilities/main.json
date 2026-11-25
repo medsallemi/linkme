@@ -1,0 +1,30 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "main",
+  "description": "Local library management and fixed product destinations. No generic plugin privileges.",
+  "windows": ["main"],
+  "permissions": [
+    "allow-reset-linkme",
+    "allow-startup-preference",
+    "allow-update-preferences",
+    "allow-check-for-updates",
+    "allow-claim-update-notice",
+    "allow-open-update-release",
+    "allow-drive-backup",
+    "allow-open-drive-privacy-policy",
+    "allow-list-drive-backups",
+    "allow-restore-drive-backup",
+    "allow-preview-preference",
+    "allow-preview-link",
+    "allow-site-icon",
+    "allow-save-link",
+    "allow-list-links",
+    "allow-list-categories",
+    "allow-save-group", "allow-order-categories", "allow-order-link", "allow-update-category",
+    "allow-delete-link",
+    "allow-copy-link",
+    "allow-open-link",
+    "allow-connect-capture",
+    "allow-update-capture"
+  ]
+}

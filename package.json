@@ -1,0 +1,41 @@
+{
+  "name": "linkme",
+  "private": true,
+  "version": "0.1.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/medsallemi/linkme.git"
+  },
+  "homepage": "https://github.com/medsallemi/linkme#readme",
+  "bugs": {
+    "url": "https://github.com/medsallemi/linkme/issues"
+  },
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 1420 --strictPort",
+    "build": "tsc --noEmit && vite build",
+    "test": "vitest run",
+    "tauri": "tauri",
+    "desktop:dev": "tauri dev",
+    "desktop:build": "tauri build --no-bundle",
+    "desktop:package": "node scripts/package-windows.mjs",
+    "check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "2.12.5",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "2.12.6",
+    "@testing-library/react": "16.3.3",
+    "@types/node": "26.6.6",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "jsdom": "31.0.1",
+    "typescript": "7.0.2",
+    "vite": "8.3.8",
+    "vitest": "5.1.1"
+  }
+}

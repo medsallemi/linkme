@@ -1,0 +1,65 @@
+{
+  "name": "Linkme",
+  "source": "Colors hand-sampled from user-selected raster artwork. Semantic tokens are proposed accessible adaptations, not direct swatches.",
+  "palette": {
+    "ink-black": "#020E18",
+    "deep-ocean": "#002F4B",
+    "ocean-blue": "#0F4A6B",
+    "deep-teal": "#126170",
+    "lagoon": "#2D988D",
+    "electric-aqua": "#2AE9DD",
+    "sea-mint": "#5CD0AF",
+    "frosted-ice": "#D5F9F1",
+    "silver-link": "#D5EBF3",
+    "muted-blue-grey": "#A1C8D1"
+  },
+  "semantic": {
+    "dark": {
+      "background": "#071C28",
+      "surface": "#0D3444",
+      "surfaceRaised": "#145068",
+      "glassTint": "#126170",
+      "textPrimary": "#E8F8F8",
+      "textSecondary": "#ADD2D9",
+      "accent": "#2AE9DD",
+      "accentHover": "#5CD0AF",
+      "border": "#477E89",
+      "focus": "#D5F9F1",
+      "success": "#5CD0AF",
+      "danger": "#FFB6AA"
+    },
+    "light": {
+      "background": "#F2F9F9",
+      "surface": "#FFFFFF",
+      "surfaceRaised": "#E3F4F2",
+      "glassTint": "#D6F1EC",
+      "textPrimary": "#103446",
+      "textSecondary": "#385C68",
+      "accent": "#087D80",
+      "accentHover": "#086569",
+      "border": "#97B7B9",
+      "focus": "#005B6E",
+      "success": "#176B56",
+      "danger": "#A72C2C"
+    }
+  },
+  "style": {
+    "cornerRadiiPx": [
+      10,
+      14,
+      18,
+      24
+    ],
+    "spacingPx": [
+      4,
+      8,
+      12,
+      16,
+      24,
+      32
+    ],
+    "fontStack": "\"Segoe UI Variable\", \"Segoe UI\", system-ui, sans-serif",
+    "glass": "Use native Windows Acrylic for transient surfaces; keep forms/content on legible solid or near-solid layers; always support forced-colors and reduced transparency.",
+    "motion": "Short deliberate transform/opacity transitions; honor prefers-reduced-motion; signature Link Flight remains separate from branding installation."
+  }
+}

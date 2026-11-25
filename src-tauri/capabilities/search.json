@@ -1,0 +1,16 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "search",
+  "description": "Search and open saved IDs from the local floating search. Copy or compose an email for a validated saved ID.",
+  "windows": ["search"],
+  "permissions": [
+    "allow-popup-ready",
+    "allow-list-links",
+    "allow-site-icon",
+    "allow-copy-link",
+    "allow-share-link-email",
+    "allow-open-search-result",
+    "allow-resize-search-panel",
+    "allow-dismiss-capture-panel"
+  ]
+}

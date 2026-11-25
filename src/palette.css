@@ -1,0 +1,52 @@
+/* Approved artwork swatches; component roles opt in below. */
+:root {
+  --lm-brand-ink-black: #020e18;
+  --lm-brand-deep-ocean: #002f4b;
+  --lm-brand-ocean-blue: #0f4a6b;
+  --lm-brand-deep-teal: #126170;
+  --lm-brand-lagoon: #2d988d;
+  --lm-brand-electric-aqua: #2ae9dd;
+  --lm-brand-sea-mint: #5cd0af;
+  --lm-brand-frosted-ice: #d5f9f1;
+  --lm-brand-silver-link: #d5ebf3;
+  --lm-brand-muted-blue-grey: #a1c8d1;
+}
+
+:root,
+[data-capture-highlight="7"] {
+  --highlight-fill: var(--lm-brand-frosted-ice);
+  --highlight-edge: var(--lm-brand-deep-ocean);
+}
+[data-capture-highlight="1"] {
+  --highlight-fill: #ded1ef;
+  --highlight-edge: #625174;
+}
+[data-capture-highlight="2"] {
+  --highlight-fill: #f2d0db;
+  --highlight-edge: #75495c;
+}
+[data-capture-highlight="3"] {
+  --highlight-fill: #f6d1bd;
+  --highlight-edge: #7e4a37;
+}
+[data-capture-highlight="4"] {
+  --highlight-fill: #f4e6bf;
+  --highlight-edge: #6a572d;
+}
+[data-capture-highlight="5"] {
+  --highlight-fill: #e5ceb9;
+  --highlight-edge: #6e503e;
+}
+[data-capture-highlight="6"] {
+  --highlight-fill: #d3e3cb;
+  --highlight-edge: #4b6143;
+}
+[data-capture-highlight="7"] {
+  --highlight-fill: var(--lm-brand-frosted-ice);
+  --highlight-edge: var(--lm-brand-deep-ocean);
+}
+
+[data-capture-highlight="0"] {
+  --highlight-fill: #bddff4;
+  --highlight-edge: #3c5e75;
+}

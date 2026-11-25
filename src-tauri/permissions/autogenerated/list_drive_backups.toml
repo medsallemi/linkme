@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-list-drive-backups"
+description = "Enables the list_drive_backups command without any pre-configured scope."
+commands.allow = ["list_drive_backups"]
+
+[[permission]]
+identifier = "deny-list-drive-backups"
+description = "Denies the list_drive_backups command without any pre-configured scope."
+commands.deny = ["list_drive_backups"]

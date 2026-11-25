@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-reset-linkme"
+description = "Enables the reset_linkme command without any pre-configured scope."
+commands.allow = ["reset_linkme"]
+
+[[permission]]
+identifier = "deny-reset-linkme"
+description = "Denies the reset_linkme command without any pre-configured scope."
+commands.deny = ["reset_linkme"]

@@ -1,0 +1,14 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "capture",
+  "description": "Local floating capture form and feedback. No library edits, settings, clipboard or native open.",
+  "windows": ["capture"],
+  "permissions": [
+    "allow-popup-ready",
+    "allow-list-categories",
+    "allow-take-capture-panel",
+    "allow-dismiss-capture-panel",
+    "allow-save-panel-link",
+    "allow-resize-capture-panel"
+  ]
+}

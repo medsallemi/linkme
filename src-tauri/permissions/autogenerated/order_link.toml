@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-order-link"
+description = "Enables the order_link command without any pre-configured scope."
+commands.allow = ["order_link"]
+
+[[permission]]
+identifier = "deny-order-link"
+description = "Denies the order_link command without any pre-configured scope."
+commands.deny = ["order_link"]

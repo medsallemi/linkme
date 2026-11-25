@@ -1,0 +1,532 @@
+.floating-glass {
+  --canvas: #dcebe7;
+  --surface: #f9fdfc;
+  --text: #113632;
+  --secondary: #304e48;
+  --error: #892219;
+  --action: #14594c;
+  --on-action: #fff;
+  --border: #77958e;
+  --focus: #00715c;
+  --rim: #fff;
+  --shell: #e8f4f0;
+  --tint: rgb(231 245 241 / 81%);
+  --glint: rgb(255 255 255 / 88%);
+  --chip: #f5fcfa;
+  --selection: #d7efe7;
+}
+
+@media (prefers-color-scheme: dark) {
+  .floating-glass {
+    --canvas: #10232a;
+    --surface: #0f2329;
+    --text: #edf9f5;
+    --secondary: #bbd2cc;
+    --error: #ffb4ab;
+    --action: #a1e6d2;
+    --on-action: #10382f;
+    --border: #648d83;
+    --focus: #a7ebd7;
+    --rim: #517b75;
+    --shell: #163138;
+    --tint: rgb(18 44 50 / 83%);
+    --glint: rgb(137 226 207 / 8%);
+    --chip: #21413f;
+    --selection: #204542;
+  }
+}
+
+.floating-glass.native-acrylic {
+  background: transparent;
+  --shell: var(--tint);
+}
+
+.capture-glass {
+  --canvas: #eaeaea;
+  --surface: #fbfbfb;
+  --text: #252525;
+  --secondary: #414141;
+  --error: #811f1f;
+  --action: var(--highlight-fill);
+  --on-action: #222;
+  --border: #777;
+  --focus: var(--highlight-edge);
+  --rim: rgb(255 255 255 / 92%);
+  --shell: #f4f4f4;
+  --capture-tint: 244 244 244;
+  --glint: rgb(255 255 255 / 40%);
+  --chip: #f7f7f7;
+}
+
+.capture-glass.native-acrylic {
+  --shell: rgb(
+    var(--capture-tint) / calc(100% - var(--capture-transparency, 25%) * 2.8)
+  );
+}
+
+@media (prefers-color-scheme: dark) {
+  .capture-glass {
+    --canvas: #161616;
+    --surface: #252525;
+    --text: #f7f7f7;
+    --secondary: #e5e5e5;
+    --error: #ffe3e3;
+    --focus: var(--action);
+    --border: #898989;
+    --rim: rgb(255 255 255 / 23%);
+    --shell: #202020;
+    --capture-tint: 18 18 18;
+    --glint: rgb(255 255 255 / 9%);
+    --chip: #303030;
+  }
+}
+
+.capture-glass :is(input, select, textarea, button.secondary) {
+  background: color-mix(in srgb, var(--surface) 86%, var(--action));
+}
+
+.capture-glass button[type="submit"] {
+  border-color: var(--focus);
+}
+
+.capture-glass .link-mark,
+.capture-glass .receiving-capsule > span:first-child {
+  color: var(--secondary);
+}
+
+@media (forced-colors: none) {
+  .capture-glass .link-chip .link-mark {
+    color: var(--lm-brand-deep-teal);
+  }
+}
+@media (prefers-color-scheme: dark) and (forced-colors: none) {
+  .capture-glass .link-chip .link-mark {
+    color: var(--lm-brand-silver-link);
+  }
+}
+
+.floating-glass.capture-glass {
+  background:
+    radial-gradient(ellipse at 0 0, var(--glint), transparent 52%), var(--shell);
+  scrollbar-color: var(--border) transparent;
+  min-height: 100dvh;
+  box-shadow: inset 0 1px var(--glint);
+}
+
+.floating-glass .capture-surface dialog {
+  inset: 0;
+  width: 100%;
+  height: 100dvh;
+  max-width: none;
+  max-height: 100dvh;
+  margin: 0;
+  padding: 18px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.floating-glass .capture-surface dialog::backdrop {
+  background: transparent;
+}
+
+.floating-glass .capture-surface dialog:has(.editor-fields[data-resizing]),
+.floating-glass .capture-surface .editor-fields[data-resizing] {
+  scrollbar-width: none;
+}
+
+@media (min-height: 320px) {
+  .floating-glass .capture-surface dialog[open] {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .floating-glass .capture-surface form {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+  }
+
+  .floating-glass .capture-surface .editor-fields {
+    overflow: auto;
+    min-height: 44px;
+    padding: 4px;
+    margin: -4px;
+  }
+}
+
+.floating-glass :is(.capture-feedback, .search-overlay) {
+  padding: 16px 18px;
+}
+
+.floating-glass .capture-feedback {
+  max-height: 100dvh;
+  overflow: auto;
+}
+
+.glass-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.glass-heading :is(h1, h2, label) {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 650;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+}
+
+.capture-heading-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-width: 0;
+  max-width: 64%;
+  gap: 8px;
+}
+
+.capture-heading-actions .link-chip {
+  max-width: 100%;
+}
+
+.floating-glass .capture-close {
+  flex: none;
+  width: 34px;
+  min-height: 34px;
+  padding: 0;
+  border-color: transparent;
+  background: transparent;
+  color: var(--text);
+  font-size: 21px;
+  line-height: 1;
+}
+
+.ui-symbol {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  flex: none;
+  vertical-align: middle;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.65;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.link-mark {
+  width: 22px;
+  height: 20px;
+}
+.link-chip,
+.receiving-capsule {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  background: var(--chip);
+  box-shadow: inset 0 1px var(--glint);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.link-chip {
+  min-width: 0;
+  max-width: 58%;
+}
+
+.link-chip-host {
+  overflow: auto;
+  overscroll-behavior: contain;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  unicode-bidi: isolate;
+}
+
+.receiving-capsule {
+  margin: 0 12px 12px 0;
+  padding-block: 7px;
+}
+
+.receiving-capsule > span:first-child {
+  color: var(--action);
+}
+
+.floating-glass :is(input, select, textarea) {
+  border-radius: 10px;
+}
+
+.floating-glass :is(#edit-url, #overlay-query) {
+  border-top-color: var(--secondary);
+}
+
+.floating-glass #edit-url {
+  font:
+    13px/1.45 Consolas,
+    monospace;
+  resize: none;
+  display: block;
+}
+
+.floating-glass button {
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.floating-glass :is(button, summary):not(:disabled):hover {
+  outline: 1px solid var(--focus);
+  outline-offset: 1px;
+}
+
+.floating-glass button:not(:disabled):active {
+  transform: translateY(1px);
+}
+
+.floating-glass :focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.floating-glass .dialog-actions {
+  border-top: 1px solid var(--rim);
+  padding-top: 12px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+  flex: none;
+}
+
+.capture-surface #edit-title[aria-invalid=true] {
+  border-color: var(--error);
+}
+
+.capture-surface .title-error {
+  margin: -2px 0 2px;
+}
+
+.floating-glass .capture-details {
+  margin-top: 8px;
+}
+
+.floating-glass .capture-details summary {
+  width: fit-content;
+  padding-inline: 6px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Keep the destination controls together in visual and keyboard order. */
+.editor-group-field,
+.editor-new-category {
+  margin-block: 10px 4px;
+}
+
+.editor-group-field {
+  padding-inline-start: 12px;
+  border-inline-start: 2px solid var(--border);
+}
+
+.editor-new-category {
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.editor-group-field > label,
+.editor-new-category > label {
+  margin-block-start: 0;
+}
+
+.editor-new-category .icon-picker {
+  margin-block-start: 8px;
+}
+
+@media (min-width: 390px) {
+  .floating-glass .capture-surface form > .editor-fields > fieldset {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 12px;
+  }
+
+  .floating-glass .editor-fields > fieldset > * {
+    grid-column: 1 / -1;
+  }
+
+  .floating-glass .editor-fields > fieldset > .editor-group-field {
+    grid-column: 2;
+    grid-row: 3 / span 2;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    align-self: end;
+  }
+
+  .floating-glass .editor-fields > fieldset > :is(label[for="edit-category"], #edit-category) {
+    grid-column: 1;
+  }
+
+  .floating-glass .editor-fields > fieldset:not(:has(.editor-group-field,.editor-new-category))
+    > :is(label[for="edit-title"], #edit-title) {
+    grid-column: 2;
+  }
+
+  .floating-glass .editor-fields > fieldset:not(:has(.editor-group-field,.editor-new-category)) > label[for="edit-title"] {
+    grid-row: 3;
+  }
+
+  .floating-glass .editor-fields > fieldset:not(:has(.editor-group-field,.editor-new-category)) > #edit-title {
+    grid-row: 4;
+  }
+
+  .floating-glass .editor-fields > fieldset:has(.editor-new-category) > :is(label[for="edit-category"], #edit-category) {
+    grid-column: 1 / -1;
+  }
+}
+
+.floating-glass .search-overlay {
+  margin: 0;
+  height: 100dvh;
+  min-height: 0;
+  padding: 18px;
+  overflow: auto;
+  overscroll-behavior: contain;
+}
+
+.floating-glass .search-overlay-results {
+  --search-row-height: 56px;
+  flex: 1 1 0;
+  min-height: calc(var(--search-row-height) + 4px);
+  overflow: hidden;
+}
+
+.floating-glass .search-overlay-results:empty {
+  min-height: 0;
+}
+
+.floating-glass .search-overlay-results [role="row"] {
+  height: var(--search-row-height);
+}
+
+.floating-glass .search-overlay-results .result-link {
+  overflow: hidden;
+}
+
+.popup-pages {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  min-height: 36px;
+  flex: none;
+  font-size: .8rem;
+  color: var(--secondary);
+}
+
+.popup-pages [aria-disabled=true] { opacity: .56; cursor: default; }
+.icon-picker[data-paged] .icon-grid { max-height: none; overflow: visible; }
+
+@media (max-height: 300px) {
+  .floating-glass .search-overlay { padding: 6px 10px; }
+  .floating-glass .search-overlay-keys { display: none; }
+  .floating-glass .search-overlay-status { margin-block: 3px; }
+}
+
+.floating-glass .search-overlay-keys {
+  border-top: 1px solid var(--rim);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .floating-glass :is(dialog[open], .capture-feedback, .search-overlay) {
+    animation: glass-in 180ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+  .floating-glass
+    :is(
+      dialog:has(form[data-exiting]),
+      .capture-feedback[data-exiting],
+      .search-overlay[data-exiting]
+    ) {
+    animation: glass-out 110ms ease-in forwards;
+    pointer-events: none;
+  }
+  .floating-glass .capture-feedback[data-error] {
+    animation: none;
+  }
+
+  @keyframes glass-in {
+    from {
+      opacity: 0.78;
+      transform: translateY(4px) scale(0.99);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  @keyframes glass-out {
+    to {
+      opacity: 0;
+      transform: translateY(3px) scale(0.99);
+    }
+  }
+}
+
+@media (prefers-reduced-transparency: reduce), (forced-colors: active) {
+  .floating-glass.native-acrylic {
+    background: var(--canvas);
+    --shell: var(--surface);
+  }
+}
+
+@media (forced-colors: active) {
+  .floating-glass {
+    --focus: Highlight;
+    --error: CanvasText;
+    --rim: ButtonBorder;
+    --chip: Canvas;
+    --shell: Canvas;
+    --selection: Canvas;
+    --glint: transparent;
+  }
+  .floating-glass.capture-glass,
+  .floating-glass :is(.link-chip, .receiving-capsule) {
+    background: Canvas;
+    box-shadow: none;
+  }
+  .floating-glass .search-overlay-results [role="row"][aria-selected="true"] {
+    border: 2px solid Highlight;
+    padding: 5px 11px;
+  }
+}
+
+.capture-glass {
+  --selection: color-mix(in srgb, var(--surface) 73%, var(--highlight-fill));
+}
+@media (prefers-color-scheme: dark) {
+  .capture-glass {
+    --selection: color-mix(in srgb, var(--surface) 82%, var(--highlight-edge));
+  }
+}
+@media (prefers-reduced-transparency: reduce) {
+  .capture-glass.native-acrylic {
+    --shell: var(--surface);
+  }
+}
+.capture-duplicate {
+  display: grid;
+  justify-items: start;
+  gap: 6px;
+  margin-block: 12px;
+}
+.capture-duplicate > strong, .capture-duplicate > .hint {
+  max-inline-size: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.capture-duplicate .receiving-capsule { margin: 0; }

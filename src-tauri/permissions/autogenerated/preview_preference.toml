@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-preview-preference"
+description = "Enables the preview_preference command without any pre-configured scope."
+commands.allow = ["preview_preference"]
+
+[[permission]]
+identifier = "deny-preview-preference"
+description = "Denies the preview_preference command without any pre-configured scope."
+commands.deny = ["preview_preference"]

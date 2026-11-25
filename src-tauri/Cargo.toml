@@ -1,0 +1,47 @@
+[package]
+name = "linkme"
+version = "0.1.0"
+license = "MIT"
+repository = "https://github.com/medsallemi/linkme"
+edition = "2024"
+rust-version = "1.90"
+
+[lib]
+name = "linkme_lib"
+
+[build-dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tauri-build = { version = "2.7", features = [] }
+
+[dependencies]
+base64 = "0.23"
+chrono = { version = "0.4", default-features = false, features = ["std"] }
+semver = "1"
+serde_json = "1"
+html5ever = "0.39"
+tauri = { version = "2.12", features = ["tray-icon"] }
+serde = { version = "1", features = ["derive"] }
+rusqlite = { version = "0.43", features = ["bundled", "backup", "serialize", "limits"] }
+url = "2.5"
+tauri-plugin-global-shortcut = "2.4.1"
+tauri-plugin-single-instance = "2.5.5"
+
+[target.'cfg(windows)'.dependencies]
+clipboard-win = "5.4"
+getrandom = "0.4"
+sha2 = "0.10"
+tempfile = "3"
+tokio = { version = "1", features = ["sync", "time"] }
+windows = { version = "0.62", features = ["Win32_Foundation", "Win32_Graphics_Dwm", "Win32_Graphics_Gdi", "Win32_Networking_WinHttp", "Win32_Security_Cryptography", "Win32_System_LibraryLoader", "Win32_System_Registry", "Win32_System_SystemInformation", "Win32_UI_Accessibility", "Win32_UI_Controls", "Win32_UI_Shell", "Win32_UI_WindowsAndMessaging"] }
+
+[dev-dependencies]
+tempfile = "3"
+tauri = { version = "2.12", features = ["test"] }
+
+[profile.dev]
+debug = 0
+incremental = false
+
+[profile.release]
+strip = true

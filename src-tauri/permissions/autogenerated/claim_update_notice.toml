@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-claim-update-notice"
+description = "Enables the claim_update_notice command without any pre-configured scope."
+commands.allow = ["claim_update_notice"]
+
+[[permission]]
+identifier = "deny-claim-update-notice"
+description = "Denies the claim_update_notice command without any pre-configured scope."
+commands.deny = ["claim_update_notice"]

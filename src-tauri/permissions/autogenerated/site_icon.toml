@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-site-icon"
+description = "Enables the site_icon command without any pre-configured scope."
+commands.allow = ["site_icon"]
+
+[[permission]]
+identifier = "deny-site-icon"
+description = "Denies the site_icon command without any pre-configured scope."
+commands.deny = ["site_icon"]

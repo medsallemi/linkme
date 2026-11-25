@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="How Linkme stores links, uses Google account and Drive data, and lets you manage or delete your information.">
+    <meta name="theme-color" content="#f2f9f9">
+    <link rel="canonical" href="https://linkme.bacontrack.tn/privacy">
+    <link rel="icon" type="image/png" href="/assets/linkme-icon.png">
+    <link rel="stylesheet" href="/styles.css">
+    <title>Privacy policy — Linkme</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header wrap">
+      <a class="brand" href="/"><img src="/assets/linkme-icon.png" width="36" height="36" alt=""><span>Linkme</span></a>
+      <nav aria-label="Main"><a href="/#google-drive">Google Drive</a><a href="/privacy" aria-current="page">Privacy policy</a></nav>
+    </header>
+    <main id="main" class="legal wrap">
+      <header class="legal-header">
+        <h1>Linkme privacy policy</h1>
+        <p>Last updated <time datetime="2026-11-25">25 November 2026</time></p>
+        <p>This policy covers the Linkme Windows desktop app, its optional Google Drive backup feature, and this product website. Contact the developer at <a href="mailto:machekelsallemi@gmail.com">machekelsallemi@gmail.com</a>.</p>
+      </header>
+
+      <section aria-labelledby="local">
+        <h2 id="local">Your local library</h2>
+        <p>Linkme stores saved URLs, titles, subtitles, notes, categories, groups, and settings in SQLite in your Windows user's application data. Linkme reads your clipboard when you invoke Capture. It uses copied URLs for the requested capture, according to your selected capture mode. The core library works offline without a Linkme account.</p>
+      </section>
+
+      <section aria-labelledby="google-data">
+        <h2 id="google-data">Google account information and permissions</h2>
+        <p>When you choose to connect, Linkme opens your default browser for Google's consent flow. Google handles your sign-in. Linkme receives authorization tokens and reads your Google account's unique identifier, profile name, and profile picture if available. The identifier helps recognize the connected account, and the name and picture show which account is connected. The app does not request access to your Google email address, contacts, Gmail, or all of your Drive files.</p>
+        <dl class="scopes">
+          <div><dt><code>openid</code></dt><dd>Identify the Google account you authorize.</dd></div>
+          <div><dt><code>profile</code></dt><dd>Display your name and profile picture when supplied by Google.</dd></div>
+          <div><dt><code>https://www.googleapis.com/auth/drive.file</code></dt><dd>Use per-file Drive access to create the Linkme backup folder and snapshots, list and read eligible snapshots for restore, and move eligible older snapshots to Drive Trash.</dd></div>
+        </dl>
+        <p>Linkme uses this Google data to operate the account connection and the backup and restore features you choose. Linkme does not sell Google user data or use it for advertising.</p>
+        <p>Linkme's use and transfer to any other app of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including its Limited Use requirements.</p>
+      </section>
+
+      <section aria-labelledby="backups">
+        <h2 id="backups">Backups, retention, and restore</h2>
+        <p>Automatic backups are off when you first connect. To upload, choose <strong>Back up now</strong> or enable a schedule. Reconnecting the same account preserves its existing schedule. Linkme sends a SQLite snapshot directly to your Google Drive. Snapshots include the library and SQLite preferences, so they can contain private URLs and notes. The Google authentication session is stored separately and is excluded from the snapshot. New snapshots go under <strong>Linkme Backups</strong> in My Drive. Eligible older Linkme backups stored at the Drive root can also be listed for restore.</p>
+        <p>The selected policy keeps up to seven manual or daily copies, four weekly copies, or twelve monthly copies among eligible backups from that installation. Automatic cleanup follows a confirmed upload and a complete listing. It moves older eligible, account-owned, unshared backups tagged for this installation to Drive Trash. Linkme does not empty the Trash. You can use Google Drive to delete or recover files under Google's retention rules.</p>
+        <p>To restore, choose an available snapshot and confirm replacement. Linkme downloads and validates the snapshot, saves a local recovery copy, and replaces the local links, categories, and groups. Device preferences and the Drive connection stay in place. Local recovery files may remain until you remove them.</p>
+      </section>
+
+      <section aria-labelledby="security">
+        <h2 id="security">Security and local retention</h2>
+        <p>The Windows Data Protection API (DPAPI) protects the stored Google refresh token, profile, and backup schedule for your Windows user. Linkme uses HTTPS for Google API calls. The local SQLite library, local recovery copies, and Drive backup files are readable SQLite data. Linkme does not encrypt those files. Access depends on your Windows account and device protections, and on your Google Drive access and sharing settings.</p>
+        <p>Your library remains on the device until you delete it. Reset removes the current library and specified local settings, and its confirmation explains what it retains. Reset preserves the Google connection, schedule, Drive backups, and local restore recovery copies. Uninstall preserves per-user app data, including the library and any saved Drive session. Remove retained local files explicitly if needed after quitting Linkme and keeping any backups you still want.</p>
+      </section>
+
+      <section aria-labelledby="disconnect">
+        <h2 id="disconnect">Disconnect, revoke, or delete</h2>
+        <p>Choose <strong>Disconnect</strong> in Linkme's Google Drive settings to remove this device's saved Google session and stop scheduled uploads. Existing Drive backups remain. To revoke Google's grant, remove Linkme from <a href="https://myaccount.google.com/connections">your Google Account connections</a>. To delete Drive backups, manage them directly in your Google Drive.</p>
+      </section>
+
+      <section aria-labelledby="sharing">
+        <h2 id="sharing">External services and sharing</h2>
+        <ul>
+          <li><strong>Google</strong> handles authentication and stores backups in the Drive account you choose. The developer does not operate a server that receives your Google profile, tokens, or library snapshots.</li>
+          <li><strong>Saved websites</strong> may receive a request for a favicon when a row becomes visible. If previews are enabled, deliberate hover or keyboard focus can request the saved address, including its path and query, and a supported thumbnail. Websites receive connection information such as your IP address. Turning previews off stops preview requests. Favicon requests are separate.</li>
+          <li><strong>GitHub</strong> receives anonymous release-metadata requests from configured builds when a check runs. The requests can include Linkme's user agent and a cache identifier. They do not include your library, Google credentials, or an installation ID. You can turn automatic checks off.</li>
+          <li><strong>Browser and email</strong> receive the selected link when you explicitly open it or choose a share action. Those services have their own privacy settings. A support email goes to the developer through email providers.</li>
+          <li><strong>This website</strong> has no sign-in, forms, advertising, or analytics scripts. The hosting service can process ordinary request information such as IP addresses to serve and secure it.</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="rights">
+        <h2 id="rights">Your choices and contact</h2>
+        <p>You can review, correct, and remove links in the app, manage your copies in Drive, and revoke Google's access as described above. For questions or requests concerning access, correction, or deletion of information the developer holds, such as a support email, contact <a href="mailto:machekelsallemi@gmail.com">machekelsallemi@gmail.com</a>. Do not send access tokens, backups, or private URLs with a support request.</p>
+      </section>
+    </main>
+    <footer class="site-footer wrap">
+      <p>Linkme for Windows</p>
+      <nav aria-label="Footer"><a href="/">Home</a><a href="/terms">Terms</a><a href="mailto:machekelsallemi@gmail.com">Developer contact</a></nav>
+    </footer>
+  </body>
+</html>
