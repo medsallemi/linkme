@@ -32,7 +32,7 @@ cargo test --locked --manifest-path src-tauri/Cargo.toml --lib
 npm.cmd run desktop:package -- local
 ```
 
-The per-user NSIS installer, standalone test executable, and checksums are staged in `src-tauri/target/release/windows-setup-local/`. The script verifies the checksum of its pinned Tauri installer template. Setup includes the Linkme MIT license and the vendored Bootstrap Icons notice. Packaging may need network access for tool or template downloads.
+The per-user NSIS installer, standalone test executable, and checksums are staged in `src-tauri/target/release/windows-setup-local/`. The script verifies the checksum of its pinned Tauri installer template. Setup includes the Linkme MIT license, the Bootstrap Icons license and the [third-party notices](../THIRD_PARTY_NOTICES.txt). Review the notice inventory when updating runtime or installer dependencies. Packaging may need network access for tool or template downloads.
 
 A plain source build works offline for core library features. To enable Google sign-in in an installer, use a **Google Desktop app** OAuth export from a project you control with the Drive API enabled. Provide its absolute path in a build shell. Use `--require-drive-oauth` to make missing or invalid build configuration an error.
 

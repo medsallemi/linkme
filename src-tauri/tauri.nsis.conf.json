@@ -6,7 +6,8 @@
     "publisher": "Linkme",
     "resources": {
       "../LICENSE": "licenses/Linkme-LICENSE.txt",
-      "../src/assets/bootstrap-icons-LICENSE.txt": "licenses/bootstrap-icons-LICENSE.txt"
+      "../src/assets/bootstrap-icons-LICENSE.txt": "licenses/bootstrap-icons-LICENSE.txt",
+      "../THIRD_PARTY_NOTICES.txt": "licenses/THIRD_PARTY_NOTICES.txt"
     },
     "shortDescription": "A local link organizer for Windows",
     "useLocalToolsDir": true,

@@ -28,4 +28,4 @@ See the [user guide](docs/USAGE.md), [Drive backup and restore](docs/DRIVE_BACKU
 
 Linkme uses Tauri 2, Rust, React, TypeScript and SQLite. Start with [building on Windows](docs/BUILD.md) and [architecture](docs/ARCHITECTURE.md). Report ordinary bugs in [GitHub Issues](https://github.com/medsallemi/linkme/issues), and report vulnerabilities through the [security policy](SECURITY.md).
 
-[Contributing](CONTRIBUTING.md) · [Changelog](CHANGELOG.md) · [MIT license](LICENSE) · [Bootstrap Icons license](src/assets/bootstrap-icons-LICENSE.txt)
+[Contributing](CONTRIBUTING.md) · [Changelog](CHANGELOG.md) · [MIT license](LICENSE) · [Third-party notices](THIRD_PARTY_NOTICES.txt) · [Bootstrap Icons license](src/assets/bootstrap-icons-LICENSE.txt)
