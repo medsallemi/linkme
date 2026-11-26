@@ -515,7 +515,11 @@ The separate WebView2 Evergreen Runtime is obtained from Microsoft.
 
 Rust standard library and compiler runtime [N155, N156, N157].
   Source: https://github.com/rust-lang/rust/tree/1.100.0/library
-  Full per-component attribution: https://doc.rust-lang.org/1.100.0/COPYRIGHT-library.html
+  Copyright (c) The Rust Project Contributors.
+  Rust project copyright: https://github.com/rust-lang/rust/blob/1.100.0/COPYRIGHT
+  Full per-component attribution is in COPYRIGHT-library.html in the
+  matching Rust 1.100.0 documentation distribution:
+  https://static.rust-lang.org/dist/rust-docs-1.100.0-x86_64-pc-windows-msvc.tar.xz
 
 License and notice texts
 ------------------------
